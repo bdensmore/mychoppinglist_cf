@@ -1,0 +1,10 @@
+## Baisc Files ##
+.DSStore
+.project
+
+## ColdBox Related Stuff##
+modules/cborm/
+coldbox
+testbox
+
+
