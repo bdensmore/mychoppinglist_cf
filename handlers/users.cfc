@@ -75,14 +75,14 @@ component{
         prc.password = user.getPassword();
 
 		if ( flash.exists( "errors" ) ) {
-            prc.errorView = renderView( view = "_templates/form_errors" );
-        }
+			prc.errorView = renderView( view = "_templates/form_errors" );
+		}
     }
 
     function update( event, rc, prc ) {
 		prc.errors = "";
 		var user = ormService.findWhere( "User", {id = rc.user_id} );
-        user.setUser_Name( rc.user_name );
+		user.setUser_Name( rc.user_name );
 		user.setPassword( rc.password);
 		ormClearSession();
 
