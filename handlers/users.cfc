@@ -112,7 +112,6 @@ component{
         prc.password = "";
         prc.formAction = "users.create";
 		prc.buttonTitle = "Create User";
-
 		rc.user_id = "";
 
         if ( flash.exists( "errors" ) ) {
