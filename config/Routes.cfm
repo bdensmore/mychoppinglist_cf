@@ -2,7 +2,7 @@
 	// Allow unique URL or combination of URLs, we recommend both enabled
 	setUniqueURLS(false);
 	// Auto reload configuration, true in dev makes sense to reload the routes on every request
-	//setAutoReload(false);
+	setAutoReload( true );
 	// Sets automatic route extension detection and places the extension in the rc.format variable
 	// setExtensionDetection(true);
 	// The valid extensions this interceptor will detect
@@ -18,9 +18,11 @@
 		setBaseURL("http://#cgi.HTTP_HOST#/#getSetting('AppMapping')#/index.cfm");
 	}
 
+	addRoute( pattern = "/users/:user_id/user_profile", handler = "user_profile", action = "new" );
 	// Your Application Routes
 	addRoute(pattern=":handler/:action?");
 
+	// addRoute( pattern = "/users/:user_id/user_profile", handler = "user_profile", action = { POST = "create", PUT = "update" } );
 
 	/** Developers can modify the CGI.PATH_INFO value in advance of the SES
 		interceptor to do all sorts of manipulations in advance of route
