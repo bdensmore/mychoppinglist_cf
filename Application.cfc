@@ -24,14 +24,14 @@ component{
 	// JAVA INTEGRATION: JUST DROP JARS IN THE LIB FOLDER
 	// You can add more paths or change the reload flag as well.
 	this.javaSettings = { loadPaths = [ "lib" ], reloadOnChange = false };
-    this.mappings[ "/mychoppinglist" ] = COLDBOX_APP_ROOT_PATH;
-    this.mappings[ "/cborm" ] = COLDBOX_APP_ROOT_PATH & "modules/cborm";
+	this.mappings[ "/mychoppinglist" ] = COLDBOX_APP_ROOT_PATH;
+	this.mappings[ "/cborm" ] = COLDBOX_APP_ROOT_PATH & "modules/cborm";
 
     this.ormenabled = true;
     this.ormsettings = {
 		cfclocation    = "models",
 		datasource      = "mychoppinglist",
-        dbcreate       = "update",
+		dbcreate       = "update",
 		useDBForMapping = false,
 		// Active ORM events
 		eventHandling 	  =  true,
@@ -48,9 +48,9 @@ component{
 
 	// request start
 	public boolean function onRequestStart(String targetPage){
-        if ( structKeyExists( url, "reload_orm") ) {
-            ormReload();
-        }
+		if ( structKeyExists( url, "reload_orm") ) {
+			ormReload();
+		}
         // Process ColdBox Request
 		application.cbBootstrap.onRequestStart( arguments.targetPage );
 
