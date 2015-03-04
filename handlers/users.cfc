@@ -107,9 +107,9 @@ component{
         prc.errorView = "";
         prc.user_name = "";
         prc.password = "";
+        prc.formAction = "users.create";
 		rc.user_id = "";
 		prc.buttonTitle = "Create User";
-        prc.formAction = "users.create";
 
         if ( flash.exists( "errors" ) ) {
             prc.errorView = renderView( view = "_templates/form_errors" );
