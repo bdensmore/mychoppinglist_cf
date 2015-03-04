@@ -26,18 +26,17 @@ component{
 	this.javaSettings = { loadPaths = [ "lib" ], reloadOnChange = false };
 	this.mappings[ "/mychoppinglist" ] = COLDBOX_APP_ROOT_PATH;
 	this.mappings[ "/cborm" ] = COLDBOX_APP_ROOT_PATH & "modules/cborm";
-
-    this.ormenabled = true;
-    this.ormsettings = {
-		cfclocation    = "models",
-		datasource      = "mychoppinglist",
-		dbcreate       = "update",
+	this.ormenabled = true;
+	this.ormsettings = {
+		cfclocation		= "models",
+		datasource		= "mychoppinglist",
+		dbcreate		= "update",
 		useDBForMapping = false,
 		// Active ORM events
-		eventHandling 	  =  true,
+		eventHandling	=  true,
 		dialect = "MySQL5",
 		// Use the ColdBox WireBox Handler for events
-		eventHandler = "cborm.models.EventHandler"
+		eventHandler	= "cborm.models.EventHandler"
 	};
 	// application start
 	public boolean function onApplicationStart(){
