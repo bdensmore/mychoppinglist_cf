@@ -104,7 +104,7 @@ component{
     }
 
 	function new( event, rc, prc ) {
-		prc.errorView = "";
+	prc.errorView = "";
 	}
 
 
