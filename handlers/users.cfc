@@ -103,7 +103,7 @@ component{
        }
     }
 
-		function new( event, rc, prc ) {
-			prc.errorView = "";
-		}
+	function new( event, rc, prc ) {
+		prc.errorView = "";
+	}
 }
