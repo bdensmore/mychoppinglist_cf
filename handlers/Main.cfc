@@ -8,6 +8,7 @@
 
     function validate( event, rc, prc ) {
         prc.errors = "";
+        prc.test = "";
         
         arrayEach( arguments.validation.getAllErrors(), function( e ) {
             prc.errors &= e & "<br>";
