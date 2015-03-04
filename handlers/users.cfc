@@ -103,10 +103,7 @@ component{
        }
     }
 
-	function new( event, rc, prc ) {
-		prc.errorView = "";
-		prc.user_name = "";
-	}
-
-
+		function new( event, rc, prc ) {
+			prc.errorView = "";
+		}
 }
