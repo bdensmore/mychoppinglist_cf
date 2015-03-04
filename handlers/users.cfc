@@ -95,14 +95,11 @@ component{
         	runEvent(
 				event = "main.validate",
 				eventArguments = {
-
 					validation = validation,
 					eventToRun = "users.edit"
-
 				},
 				persist = "user_id"
 			);
-
        }
     }
 
