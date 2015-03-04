@@ -104,12 +104,10 @@ component{
     }
 
     function new( event, rc, prc ) {
-		rc.user_id = "";
         prc.errorView = "";
         prc.user_name = "";
         prc.password = "";
         prc.formAction = "users.create";
-		prc.buttonTitle = "Create User";
 
         if ( flash.exists( "errors" ) ) {
             prc.errorView = renderView( view = "_templates/form_errors" );
